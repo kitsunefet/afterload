@@ -1,24 +1,10 @@
 {
   "_args": [
     [
-      "after-load",
+      "afterload",
       "/root"
     ]
   ],
-  "_from": "after-load@latest",
-  "_id": "after-load@1.0.4",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/after-load",
-  "_nodeVersion": "6.2.1",
-  "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/after-load-1.0.4.tgz_1469599690826_0.3889736335258931"
-  },
-  "_npmUser": {
-    "email": "abdennour@rathath-it.com",
-    "name": "abdennour"
-  },
   "_npmVersion": "3.9.3",
   "_phantomChildren": {
     "core-util-is": "1.0.2",
@@ -31,65 +17,27 @@
     "jsdom": "7.2.2",
     "lodash": "4.17.4"
   },
-  "_requested": {
-    "name": "after-load",
-    "raw": "after-load",
-    "rawSpec": "",
-    "scope": null,
-    "spec": "latest",
-    "type": "tag"
-  },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/after-load/-/after-load-1.0.4.tgz",
-  "_shasum": "9781c5b80cf5d095d3a6674553ca533ba5c8b849",
-  "_shrinkwrap": null,
-  "_spec": "after-load",
-  "_where": "/root",
-  "author": {
-    "email": "http://abdennoor.com",
-    "name": "Abdennour TOUMI"
-  },
-  "bugs": {
-    "url": "https://github.com/abdennour/node-afterload/issues"
   },
   "dependencies": {
     "cheerio": "^0.20.0"
   },
-  "description": "Extract content of remote webpage after loading such as browser",
-  "devDependencies": {},
-  "directories": {},
-  "dist": {
-    "shasum": "9781c5b80cf5d095d3a6674553ca533ba5c8b849",
-    "tarball": "https://registry.npmjs.org/after-load/-/after-load-1.0.4.tgz"
-  },
-  "gitHead": "e35638ebc9572baa34e26478c913542188e00536",
-  "homepage": "https://github.com/abdennour/node-afterload#readme",
-  "keywords": [
-    "after-loading",
-    "browser",
-    "phantom",
-    "reverse-engineering",
-    "webpage"
-  ],
   "license": "MIT",
   "main": "index.js",
   "maintainers": [
     {
-      "name": "abdennour",
-      "email": "abdennour@rathath-it.com"
+      "name": "fet",
+      "email": "mail@fet.ninja"
     }
   ],
-  "name": "after-load",
+  "name": "afterload",
   "optionalDependencies": {},
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abdennour/node-afterload.git"
+    "url": "git+https://github.com/kitsunefet/afterload"
   },
-  "scripts": {
-    "test": "require('after-load')('https://google.com')"
-  },
-  "version": "1.0.4"
+  "version": "1.0.0"
 }
