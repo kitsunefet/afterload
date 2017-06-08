@@ -4,29 +4,29 @@ var url = require('url');
 var afterLoad=require('afterload');
 var token= args[2];
 if(!token){
-	console.log('no token found, start panic');
-	process.exit(-1);
+        console.log('no token found, start panic');
+        process.exit(-1);
 }
 var port = args[3];
 if(!port){
-	console.log('no port found, using default');
-	port=33333;
+        console.log('no port found, using default');
+        port=33333;
 }
 
 var server = http.createServer(function(request, response) {
-	var queryData = url.parse(request.url, true).query;
+        var queryData = url.parse(request.url, true).query;
 
-//console.log('query'+queryData.url);
+//console.log('query: '+queryData.url);
 
-	response.writeHead(200, {"Content-Type": "text/html"});
-	if (queryData.token===token && queryData.url) {
-		var afterLoad=require('afterload');
-		var html=afterLoad(queryData.url);
+        response.writeHead(200, {"Content-Type": "text/html"});
+        if (queryData.token===token && queryData.url) {
+                var afterLoad=require('afterload');
+                var html=afterLoad(require('querystring').escape(queryData.url));
 
-		response.write(html);
+                response.write(html);
 
-//		console.log(html);
-	}
+//              console.log(html);
+        }
 
 
 response.end();
