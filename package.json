@@ -3,8 +3,17 @@
     [
       "afterload",
       "/root"
+    ],
+    [
+      "git://github.com/kitsunefet/afterload.git",
+      "/root"
     ]
   ],
+  "_from": "git://github.com/kitsunefet/afterload.git",
+  "_id": "afterload@1.0.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/afterload",
   "_npmVersion": "3.9.3",
   "_phantomChildren": {
     "core-util-is": "1.0.2",
@@ -17,12 +26,40 @@
     "jsdom": "7.2.2",
     "lodash": "4.17.4"
   },
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/kitsunefet/afterload/master/package.json",
+      "gitUrl": "git://github.com/kitsunefet/afterload.git",
+      "httpsUrl": "git+https://github.com/kitsunefet/afterload.git",
+      "shortcut": "github:kitsunefet/afterload",
+      "ssh": "git@github.com:kitsunefet/afterload.git",
+      "sshUrl": "git+ssh://git@github.com/kitsunefet/afterload.git",
+      "type": "github"
+    },
+    "name": null,
+    "raw": "git://github.com/kitsunefet/afterload.git",
+    "rawSpec": "git://github.com/kitsunefet/afterload.git",
+    "scope": null,
+    "spec": "git://github.com/kitsunefet/afterload.git",
+    "type": "hosted"
+  },
   "_requiredBy": [
-    "/"
+    "#USER"
   ],
+  "_resolved": "git://github.com/kitsunefet/afterload.git#b42f7c8b55102495134d8318a35803b96398834b",
+  "_shasum": "5ca9eb2b257ba57b8e0e3c48eeb5eeb09e1f0de5",
+  "_shrinkwrap": null,
+  "_spec": "git://github.com/kitsunefet/afterload.git",
+  "_where": "/root",
+  "bugs": {
+    "url": "https://github.com/kitsunefet/afterload/issues"
+  },
   "dependencies": {
     "cheerio": "^0.20.0"
   },
+  "devDependencies": {},
+  "gitHead": "b42f7c8b55102495134d8318a35803b96398834b",
+  "homepage": "https://github.com/kitsunefet/afterload#readme",
   "license": "MIT",
   "main": "index.js",
   "maintainers": [
