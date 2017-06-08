@@ -20,7 +20,6 @@
   "_requiredBy": [
     "/"
   ],
-  },
   "dependencies": {
     "cheerio": "^0.20.0"
   },
@@ -37,7 +36,7 @@
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kitsunefet/afterload"
+    "url": "git+https://github.com/kitsunefet/afterload.git"
   },
   "version": "1.0.0"
 }
