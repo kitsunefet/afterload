@@ -15,38 +15,32 @@ if(!port){
 
 var server = http.createServer(function(request, response) {
         var queryData = url.parse(request.url, true).query;
-
 //
 //console.log('');
 //console.log('query: '+queryData.url);
 
         var check = new RegExp('https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)');
+
 //todo - fix regexp
         check = RegExp('.*');
+        
         if(!check.test(queryData.url)){
-         queryData="";
-
-console.log("filtered");
-response.writeHead(200, {"Content-Type": "text/html"});
-response.write("wrong query");
-response.end();
-    }
-else{
-
-        response.writeHead(200, {"Content-Type": "text/html"});
-        if (queryData.token===token && queryData.url) {
-                var afterLoad=require('afterload');
-                var html=afterLoad(require('querystring').escape(queryData.url));
-
-                response.write(html);
-
+                queryData="";
+                console.log("filtered");
+                response.writeHead(200, {"Content-Type": "text/html"});
+                response.write("wrong query");
+                response.end();
+        }
+        else{
+                response.writeHead(200, {"Content-Type": "text/html"});
+                if (queryData.token===token && queryData.url) {
+                        var afterLoad=require('afterload');
+                        var html=afterLoad(require('querystring').escape(queryData.url));
+                        response.write(html);
 //              console.log(html);
         }
-
-
-response.end();
+        response.end();
 }
-
 
 });
 
