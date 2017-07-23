@@ -1,17 +1,17 @@
 ((shell,os,cheerio,api)=>{
       api.phantomPath=`${__dirname}/lib/phantom_${os.platform()}/bin/phantomjs`;
-      api.cmd=(url)=> `${api.phantomPath} ${__dirname}/bin/script-phantom.js ${url}`;
+      api.cmd=(url,timeout,ua,operation)=> `${api.phantomPath} ${__dirname}/bin/script-phantom.js ${url} ${timeout} ${ua} ${operation}`;
 
     api.getHTMLAsync=function(cmd,fn){
         shell.exec(cmd,function (error, stdout, stderr) {
                fn.call(null,stdout,api.getHTML.$(stdout));
         });
     };
-     api.getHTML=function(url,fn){
+     api.getHTML=function(url,timeout,ua,operation,fn){
         if(typeof fn==='function'){
-           api.getHTMLAsync(api.cmd(url),fn);
+           api.getHTMLAsync(api.cmd(url,timeout,ua,operation),fn);
         }else{
-           return shell.execSync(api.cmd(url),{ encoding: 'utf8' });
+           return shell.execSync(api.cmd(url,timeout,ua,operation),{ encoding: 'utf8' });
         }
 
      };
